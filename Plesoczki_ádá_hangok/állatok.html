@@ -1,0 +1,106 @@
+<style>
+
+    div#linkek
+    {
+	margin           : 36px 48px            ;
+	padding          : 16px 160px 16px 36px ;
+	width            : 250px                 ;
+	border           : solid 2px #008       ;
+	border-radius    : 12px                 ;
+	background-color : #990000              ;
+	text-align       : center               ;
+	line-height      : 32px                 ;
+	color			 :	#000000		 	;
+    }
+
+    div#linkek a
+    {
+	color            : #000099
+	;
+	font-weight      : bold                 ;
+	text-decoration  : none                 ;
+    }
+
+    div#linkek img.abra
+    {
+	float            : right                ;
+	margin-right     :-128px                ;
+	width            : 108px                ;
+    }
+
+    div#linkek a:hover
+    {
+	color            : #cc0000                 ;
+    }
+
+    div#hang
+    {
+	display          : none                 ;
+    }
+
+    audio
+    {
+	width            : 232px                ;
+    }
+
+@media screen and (orientation: portrait) 
+{
+
+    div#hang
+    {
+	width            : 232px                ;
+	height           :  48px                ;
+	padding-bottom   :  16px                ;
+	display          : block                ;
+    }
+
+}
+
+</style>
+<div id='linkek'>
+
+    <img src='headset.png' class='abra'>
+
+    <a href='javascript:' onClick=' lejatszas("oroszlán") '> oroszlán </a><br>
+    <a href='javascript:' onClick=' lejatszas("bálna")  '> bálna  </a><br>
+    <a href='javascript:' onClick=' lejatszas("malac")   '> Malac   </a><br><br><img src='hangjegy.png' class='abra'>
+	<a href='javascript:' onClick=' lejatszas("pingvin") '> Pingvin  </a><br>
+	<a href='javascript:' onClick=' lejatszas("kutya") '> Kutya </a><br>
+	<a href='javascript:' onClick=' lejatszas("macska") '> Macska</a><br><br>
+	<a href='javascript:' onClick=' lejatszas("liba")   '> Liba   </a><br>
+	<a href='javascript:' onClick=' lejatszas("kacsa")   '> Kacsa   </a><br>
+	<a href='javascript:' onClick=' lejatszas("papagaj")   '> Papagáj  </a><br><br>
+	
+	
+
+    <div id=hang><audio controls></audio></div>
+
+    <input type=button    onClick=' lejatszas("csend")   '  value='Némítás'>
+
+</div>
+
+
+
+
+<script>
+
+    function lejatszas(x)
+    {
+
+	if( x=="oroszlán" )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/lion.mp3' type='audio/mpeg'></audio>"  
+	if( x=="bálna"  )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/whale.mp3'    type='audio/mpeg'></audio>"  
+	if( x=="malac"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/pig.mp3'      type='audio/mpeg'></audio>"
+	if( x=="Pingvin"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/pingvin.mp3'      type='audio/mpeg'></audio>"
+	if( x=="kutya"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/kutya.mp3'      type='audio/mpeg'></audio>"
+	if( x=="macska"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/cat2.mp3'      type='audio/mpeg'></audio>"
+	if( x=="liba"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/goose.mp3'      type='audio/mpeg'></audio>"
+	if( x=="kacsa"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/kacsa.mp3'      type='audio/mpeg'></audio>"
+	if( x=="papagaj"   )   hang.innerHTML = "<audio controls autoplay><source src='./állatok/kacsa.mp3'      type='audio/mpeg'></audio>"
+	
+	
+
+	if( x=="csend"   )   hang.innerHTML = "<audio controls></audio>"
+
+    }
+
+</script>
